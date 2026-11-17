@@ -1,0 +1,70 @@
+/* Estilos compartidos de las pantallas del administrador (responsable: Persona 1).
+   Los usan Gestión de usuarios (Persona 1), Gestión de automóviles (Persona 4) y Gestión de citas (Persona 5). */
+
+:root {
+  --verde: #1d6b48;
+  --verde-oscuro: #14513a;
+  --fondo: #f4f6f5;
+  --barra: #23272b;
+}
+
+body.admin {
+  background: var(--fondo);
+  min-height: 100vh;
+}
+
+/* Menú del administrador */
+.menu-admin {
+  background: var(--barra);
+}
+.menu-admin .navbar-brand {
+  font-weight: 700;
+  letter-spacing: .5px;
+}
+.menu-admin .nav-link {
+  color: rgba(255, 255, 255, .75);
+}
+.menu-admin .nav-link:hover,
+.menu-admin .nav-link.active {
+  color: #fff;
+}
+.menu-admin .nav-link.active {
+  border-bottom: 2px solid #4fbf8a;
+}
+
+.admin-titulo {
+  font-weight: 700;
+  border-bottom: 1px solid #d5dbd8;
+  padding-bottom: .5rem;
+}
+
+.admin-tarjeta {
+  border: 0;
+  border-radius: 14px;
+  box-shadow: 0 4px 18px rgba(0, 0, 0, .06);
+}
+
+.admin-tabla th {
+  background: #eef2f0;
+  font-weight: 600;
+  white-space: nowrap;
+}
+.admin-tabla td {
+  vertical-align: middle;
+}
+
+.btn-verde {
+  background: var(--verde);
+  border-color: var(--verde);
+  color: #fff;
+}
+.btn-verde:hover, .btn-verde:focus {
+  background: var(--verde-oscuro);
+  border-color: var(--verde-oscuro);
+  color: #fff;
+}
+
+.form-control:focus, .form-select:focus {
+  border-color: var(--verde);
+  box-shadow: 0 0 0 .2rem rgba(29, 107, 72, .2);
+}

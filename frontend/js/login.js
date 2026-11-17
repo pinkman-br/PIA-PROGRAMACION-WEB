@@ -13,11 +13,12 @@ function mostrarAviso(texto, tipo) {
 
 // A dónde ir después de entrar. Ej.: /login?volver=/detalle?id=3 regresa al auto que estaba viendo.
 // Solo se aceptan rutas de esta misma página (empiezan con "/" pero no con "//").
+// El administrador solo regresa a pantallas de /admin/; si no, va al panel.
 function destinoDespuesDeEntrar(usuario) {
-  if (usuario.id_rol === 1) return RUTA_PANEL_ADMIN;
   const volver = new URLSearchParams(location.search).get('volver');
-  if (volver && volver.startsWith('/') && !volver.startsWith('//')) return volver;
-  return '/';
+  const volverValido = volver && volver.startsWith('/') && !volver.startsWith('//');
+  if (usuario.id_rol === 1) return volverValido && volver.startsWith('/admin') ? volver : RUTA_PANEL_ADMIN;
+  return volverValido ? volver : '/';
 }
 
 // Mensaje cuando viene de crear su cuenta
