@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Mi perfil | Seminuevos</title>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css">
+  <link rel="stylesheet" href="/css/perfil.css">
+</head>
+<body class="perfil">
+  <!-- Pantalla Mi perfil (responsable: Persona 1). Solo para quien inició sesión. -->
+
+  <!-- Aquí va el menú compartido que hace Persona 2 -->
+  <div id="menu"></div>
+
+  <main class="container py-4 py-md-5">
+    <h1 class="perfil-titulo mb-4">Mi perfil</h1>
+
+    <div id="aviso" class="alert d-none" role="alert"></div>
+
+    <div class="row g-4">
+      <!-- Datos de la cuenta -->
+      <section class="col-lg-7">
+        <div class="card perfil-tarjeta">
+          <div class="card-body p-4">
+            <h2 class="h5 mb-3">Datos de la cuenta</h2>
+
+            <form id="formPerfil" novalidate>
+              <fieldset id="campos" disabled>
+                <div class="mb-3">
+                  <label for="nombre_completo" class="form-label">Nombre completo</label>
+                  <input type="text" class="form-control" id="nombre_completo" name="nombre_completo"
+                         autocomplete="name" minlength="3" maxlength="120" required>
+                  <div class="invalid-feedback">Escribe tu nombre completo.</div>
+                </div>
+                <div class="mb-3">
+                  <label for="correo" class="form-label">Correo electrónico</label>
+                  <input type="email" class="form-control" id="correo" name="correo"
+                         autocomplete="email" maxlength="150" required>
+                  <div class="invalid-feedback">Escribe un correo válido.</div>
+                </div>
+                <div class="mb-4">
+                  <label for="telefono" class="form-label">Teléfono</label>
+                  <input type="tel" class="form-control" id="telefono" name="telefono"
+                         autocomplete="tel" inputmode="numeric" pattern="\d{10}" required>
+                  <div class="invalid-feedback">El teléfono debe tener 10 dígitos.</div>
+                </div>
+                <button type="submit" class="btn btn-verde px-4" id="btnGuardar">Guardar cambios</button>
+              </fieldset>
+            </form>
+          </div>
+        </div>
+      </section>
+
+      <!-- Accesos de mi cuenta -->
+      <aside class="col-lg-5">
+        <div class="card perfil-tarjeta">
+          <div class="card-body p-4">
+            <h2 class="h5">Accesos de mi cuenta</h2>
+            <p class="text-secondary small">Tus datos se usarán para llenar automáticamente la solicitud de prueba de manejo.</p>
+            <p class="small mb-3">
+              <span class="text-secondary">Tipo de cuenta:</span> <strong id="rol">—</strong><br>
+              <span class="text-secondary">Miembro desde:</span> <strong id="desde">—</strong>
+            </p>
+            <a href="/favoritos" class="btn btn-azul w-100 mb-2">Ver mis favoritos</a>
+            <a href="/mis-citas" class="btn btn-verde w-100 mb-3">Ver mis citas</a>
+            <button type="button" class="btn btn-link text-secondary w-100" id="btnSalir">Cerrar sesión</button>
+          </div>
+        </div>
+      </aside>
+    </div>
+  </main>
+
+  <script src="/js/api.js"></script>
+  <script src="/js/perfil.js"></script>
+</body>
+</html>
