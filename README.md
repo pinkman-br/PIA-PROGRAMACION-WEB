@@ -75,12 +75,15 @@ seminuevos-web/
 
 | Integrante | Backend (`backend/routes/`) | Frontend (`frontend/`) |
 |---|---|---|
-| Persona 1 | `salud.js`, `auth.js`, `perfil.js` | Iniciar sesión, Crear cuenta, Mi perfil |
-| Persona 2 | `catalogo.js` | Estilos, menú, Inicio, Catálogo, Detalle, Nosotros, Contacto |
-| Persona 3 | `adminAutomoviles.js`, `adminUsuarios.js` | Panel admin, Gestión de automóviles, Gestión de usuarios |
-| Persona 4 | `favoritos.js`, `citas.js`, `adminCitas.js` | Favoritos, Agendar prueba, Mis citas, Gestión de citas |
+| Persona 1 | `salud.js`, `auth.js`, `perfil.js`, `adminUsuarios.js` | Iniciar sesión, Crear cuenta, Mi perfil, Gestión de usuarios (CRUD 2) |
+| Persona 2 | `catalogo.js` | Estilos, menú y pie de página, Inicio, Acerca de nosotros, Contacto |
+| Persona 3 | `favoritos.js` | Catálogo, Detalle del automóvil, botón de favorito, Favoritos |
+| Persona 4 | `adminAutomoviles.js` | Panel de administración (`admin/index.html`), Gestión de automóviles (CRUD 1), Agregar / editar automóvil |
+| Persona 5 | `citas.js`, `adminCitas.js` | Agendar prueba de manejo, Mis citas, Gestión de citas |
 
 Las rutas de todos ya están conectadas en `server.js`: **cada quien solo edita sus propios archivos**.
+
+Después de iniciar sesión, el administrador entra a `/admin/` y el usuario regresa al Inicio (o a la página indicada en `?volver=`).
 
 ## Reglas de Git
 
