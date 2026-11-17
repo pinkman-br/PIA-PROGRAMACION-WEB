@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Crear cuenta | Seminuevos</title>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css">
+  <link rel="stylesheet" href="/css/auth.css">
+</head>
+<body class="auth">
+  <!-- Pantalla Crear cuenta (responsable: Persona 1) -->
+  <main class="card auth-tarjeta">
+    <div class="card-body p-4 p-md-5">
+      <a href="/" class="auth-marca">Seminuevos</a>
+      <h1 class="mt-3 mb-1">Crear cuenta</h1>
+      <p class="text-secondary mb-4">Tu nombre y teléfono se usarán como datos de contacto en tus citas.</p>
+
+      <div id="aviso" class="alert d-none" role="alert"></div>
+
+      <form id="formRegistro" novalidate>
+        <div class="mb-3">
+          <label for="nombre_completo" class="form-label">Nombre completo</label>
+          <input type="text" class="form-control" id="nombre_completo" name="nombre_completo"
+                 autocomplete="name" minlength="3" maxlength="120" required>
+          <div class="invalid-feedback">Escribe tu nombre completo.</div>
+        </div>
+        <div class="mb-3">
+          <label for="correo" class="form-label">Correo electrónico</label>
+          <input type="email" class="form-control" id="correo" name="correo"
+                 autocomplete="email" maxlength="150" required>
+          <div class="invalid-feedback">Escribe un correo válido.</div>
+        </div>
+        <div class="mb-3">
+          <label for="telefono" class="form-label">Teléfono</label>
+          <input type="tel" class="form-control" id="telefono" name="telefono"
+                 autocomplete="tel" inputmode="numeric" pattern="\d{10}"
+                 placeholder="10 dígitos" required>
+          <div class="invalid-feedback">El teléfono debe tener 10 dígitos.</div>
+        </div>
+        <div class="mb-3">
+          <label for="contrasena" class="form-label">Contraseña</label>
+          <input type="password" class="form-control" id="contrasena" name="contrasena"
+                 autocomplete="new-password" minlength="8" required>
+          <div class="invalid-feedback">Mínimo 8 caracteres.</div>
+        </div>
+        <div class="mb-4">
+          <label for="confirmar" class="form-label">Confirmar contraseña</label>
+          <input type="password" class="form-control" id="confirmar" name="confirmar"
+                 autocomplete="new-password" required>
+          <div class="invalid-feedback">Las contraseñas no coinciden.</div>
+        </div>
+        <button type="submit" class="btn btn-verde w-100 py-2" id="btnCrear">Crear cuenta</button>
+      </form>
+
+      <p class="text-center mt-4 mb-0">¿Ya tienes cuenta? <a href="/login">Iniciar sesión</a></p>
+    </div>
+  </main>
+
+  <script src="/js/api.js"></script>
+  <script src="/js/registro.js"></script>
+</body>
+</html>
