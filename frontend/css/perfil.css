@@ -1,0 +1,53 @@
+/* Estilos de la pantalla Mi perfil (responsable: Persona 1).
+   Los colores generales y el menú los define Persona 2 en estilos.css. */
+
+:root {
+  --verde: #1d6b48;
+  --verde-oscuro: #14513a;
+  --azul: #355c96;
+  --fondo: #f4f6f5;
+}
+
+body.perfil {
+  background: var(--fondo);
+  min-height: 100vh;
+}
+
+.perfil-titulo {
+  font-weight: 700;
+  border-bottom: 1px solid #d5dbd8;
+  padding-bottom: .5rem;
+}
+
+.perfil-tarjeta {
+  border: 0;
+  border-radius: 14px;
+  box-shadow: 0 4px 18px rgba(0, 0, 0, .06);
+}
+
+.btn-verde {
+  background: var(--verde);
+  border-color: var(--verde);
+  color: #fff;
+}
+.btn-verde:hover, .btn-verde:focus {
+  background: var(--verde-oscuro);
+  border-color: var(--verde-oscuro);
+  color: #fff;
+}
+
+.btn-azul {
+  background: var(--azul);
+  border-color: var(--azul);
+  color: #fff;
+}
+.btn-azul:hover, .btn-azul:focus {
+  background: #2a4a7a;
+  border-color: #2a4a7a;
+  color: #fff;
+}
+
+.form-control:focus {
+  border-color: var(--verde);
+  box-shadow: 0 0 0 .2rem rgba(29, 107, 72, .2);
+}
