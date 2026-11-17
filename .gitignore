@@ -1,0 +1,11 @@
+# Dependencias
+node_modules/
+
+# Datos de conexión (cada quien tiene los suyos)
+.env
+
+# Sistema operativo y editores
+.DS_Store
+Thumbs.db
+.vscode/
+*.log
