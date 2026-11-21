@@ -1,0 +1,41 @@
+/* Estilos del panel y de la administración de automóviles (responsable: Persona 4).
+   Los colores y el menú del administrador vienen de admin.css (Persona 1). */
+
+/* Tarjetas del panel */
+.panel-opcion {
+  transition: box-shadow .2s, transform .2s;
+}
+.panel-opcion:hover {
+  box-shadow: 0 8px 24px rgba(0, 0, 0, .1);
+  transform: translateY(-2px);
+}
+.panel-cifra {
+  font-size: 2rem;
+  font-weight: 700;
+  color: var(--verde);
+  line-height: 1;
+}
+
+/* Miniatura en la tabla */
+.miniatura {
+  width: 72px;
+  height: 46px;
+  object-fit: cover;
+  border-radius: 6px;
+  background: #e9edeb;
+}
+
+/* Vista previa de la foto en el formulario */
+.vista-previa {
+  width: 100%;
+  max-width: 360px;
+  aspect-ratio: 16 / 10;
+  object-fit: cover;
+  border-radius: 10px;
+  background: #e9edeb;
+  border: 1px solid #dfe5e2;
+}
+
+.estrella {
+  color: #e0a800;
+}
