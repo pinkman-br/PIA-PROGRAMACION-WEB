@@ -3,6 +3,7 @@
 //
 //   formatoPrecio(489900)    → "$489,900"
 //   formatoKm(21500)         → "21,500 km"
+//   nombreAuto(auto)         → "Volkswagen Tiguan" (sin repetir la marca si el modelo ya la trae: "MG ONE")
 //   tarjetaAuto(auto)        → HTML de una tarjeta con foto, nombre, precio y "Ver más"
 //   tarjetaAuto(auto, extra) → igual, con botones extra al final (por ejemplo el de favorito)
 
@@ -20,6 +21,13 @@ function formatoKm(km) {
   return Number(km).toLocaleString('es-MX') + ' km';
 }
 
+// Si el modelo ya empieza con la marca (marca "MG", modelo "MG ONE"), no se repite
+function nombreAuto(auto) {
+  const marca = String(auto.marca || '');
+  const modelo = String(auto.modelo || '');
+  return modelo.toLowerCase().startsWith(marca.toLowerCase() + ' ') ? modelo : `${marca} ${modelo}`;
+}
+
 // La base guarda rutas como "img/autos/archivo.jpg"; se les pone "/" al inicio
 function rutaImagen(auto) {
   if (!auto.imagen_url) return IMAGEN_SIN_FOTO;
@@ -27,7 +35,7 @@ function rutaImagen(auto) {
 }
 
 function tarjetaAuto(auto, extra = '') {
-  const nombre = `${auto.marca} ${auto.modelo}`;
+  const nombre = nombreAuto(auto);
   return `
     <article class="tarjeta-auto">
       <img src="${escAuto(rutaImagen(auto))}" alt="${escAuto(nombre)} ${escAuto(auto.anio)}" loading="lazy"

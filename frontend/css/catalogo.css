@@ -1,0 +1,78 @@
+/* Estilos de Catálogo, Detalle y Favoritos (responsable: Persona 3).
+   Los colores generales y las tarjetas vienen de estilos.css (Persona 2). */
+
+/* Botón de favorito (corazón) */
+.btn-favorito {
+  border: 1px solid var(--borde);
+  background: #fff;
+  color: #9aa5a0;
+  line-height: 1;
+  min-width: 2.4rem;
+}
+.btn-favorito:hover {
+  color: #d23c5a;
+  border-color: #d23c5a;
+}
+.btn-favorito.activo {
+  color: #d23c5a;
+  border-color: #f0b6c2;
+  background: #fdf1f4;
+}
+.btn-favorito .corazon {
+  font-size: 1.1rem;
+}
+
+/* Barra de búsqueda y filtros del catálogo */
+.filtros {
+  background: #fff;
+  border-radius: var(--radio);
+  box-shadow: var(--sombra);
+}
+
+/* Detalle del automóvil */
+.detalle-foto {
+  width: 100%;
+  aspect-ratio: 16 / 10;
+  object-fit: cover;
+  border-radius: var(--radio);
+  background: #e9edeb;
+}
+.detalle-precio {
+  color: var(--verde);
+  font-size: 2rem;
+  font-weight: 700;
+}
+.detalle-datos dt {
+  color: var(--texto-suave);
+  font-weight: 400;
+}
+.detalle-datos dd {
+  font-weight: 600;
+}
+
+/* Aviso flotante (guardado / quitado de favoritos) */
+.aviso-flotante {
+  position: fixed;
+  left: 50%;
+  bottom: 24px;
+  transform: translateX(-50%);
+  background: var(--barra);
+  color: #fff;
+  padding: .6rem 1.1rem;
+  border-radius: 999px;
+  font-size: .9rem;
+  box-shadow: 0 6px 20px rgba(0, 0, 0, .2);
+  z-index: 1080;
+  opacity: 0;
+  transition: opacity .2s;
+  pointer-events: none;
+}
+.aviso-flotante.visible {
+  opacity: 1;
+}
+
+/* Tarjeta de un auto ya vendido (en Favoritos) */
+.tarjeta-auto.vendido img {
+  filter: grayscale(1);
+  opacity: .7;
+}
