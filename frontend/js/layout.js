@@ -72,7 +72,7 @@ function dibujarPie() {
         </div>
       </div>
       <hr class="border-secondary my-3">
-      <p class="small mb-0">© ${new Date().getFullYear()} ${NOMBRE_SITIO} · Proyecto final de Programación Web, FIME UANL · Equipo 1</p>
+      <p class="small mb-0">© ${new Date().getFullYear()} ${NOMBRE_SITIO} · PIA de Programación Web, FIME UANL · Equipo 1</p>
     </div>`;
 }
 
