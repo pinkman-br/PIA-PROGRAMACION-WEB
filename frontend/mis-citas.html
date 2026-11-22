@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Mis citas | Seminuevos</title>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css">
+  <link rel="stylesheet" href="/css/estilos.css">
+  <link rel="stylesheet" href="/css/citas.css">
+</head>
+<body>
+  <!-- Pantalla Mis citas (responsable: Persona 5). Solo con sesión. -->
+  <header id="encabezado"></header>
+
+  <main class="container py-4 py-md-5">
+    <h1 class="titulo-pagina mb-4">Mis citas</h1>
+    <h2 class="titulo-seccion mb-3">Pruebas de manejo solicitadas</h2>
+    <div id="aviso" class="alert d-none" role="alert"></div>
+
+    <div class="tarjeta">
+      <div class="table-responsive">
+        <table class="table mb-0 align-middle">
+          <thead class="table-light">
+            <tr><th>Automóvil</th><th>Fecha</th><th>Hora</th><th>Estatus</th><th class="text-end">Acciones</th></tr>
+          </thead>
+          <tbody id="tablaCitas">
+            <tr><td colspan="5" class="text-center text-secondary py-4">Cargando...</td></tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+
+    <a href="/catalogo" class="btn btn-verde mt-4">Buscar otro auto</a>
+    <p class="small text-secondary mt-3 mb-0">Aquí puedes revisar el estado de tus solicitudes. La agencia confirma o reprograma cada cita.</p>
+  </main>
+
+  <!-- Ventana: detalle de la cita -->
+  <div class="modal fade" id="modalVer" tabindex="-1" aria-labelledby="tituloVer" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h2 class="modal-title h5" id="tituloVer">Detalle de la cita</h2>
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Cerrar"></button>
+        </div>
+        <div class="modal-body"><dl class="row mb-0" id="detalleCita"></dl></div>
+        <div class="modal-footer"><button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cerrar</button></div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Ventana: confirmar cancelación -->
+  <div class="modal fade" id="modalCancelar" tabindex="-1" aria-labelledby="tituloCancelar" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h2 class="modal-title h5" id="tituloCancelar">Cancelar cita</h2>
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Cerrar"></button>
+        </div>
+        <div class="modal-body"><p class="mb-0">¿Seguro que quieres cancelar tu prueba de manejo del <strong id="textoCancelar"></strong>?</p></div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">No, conservarla</button>
+          <button type="button" class="btn btn-danger" id="btnConfirmarCancelar">Sí, cancelar</button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <footer id="pie"></footer>
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+  <script src="/js/api.js"></script>
+  <script src="/js/layout.js"></script>
+  <script src="/js/menu-sesion.js"></script>
+  <script src="/js/autos.js"></script>
+  <script src="/js/citas-comun.js"></script>
+  <script src="/js/mis-citas.js"></script>
+</body>
+</html>
