@@ -1,0 +1,222 @@
+/* Estilos generales del sitio público (responsable: Persona 2)
+   Colores, tipografía, botones, menú, pie de página y tarjetas de autos. */
+
+:root {
+  --verde: #1d6b48;
+  --verde-oscuro: #14513a;
+  --verde-claro: #e6f1ec;
+  --barra: #23272b;
+  --fondo: #f4f6f5;
+  --texto: #1f2a24;
+  --texto-suave: #5f6b65;
+  --borde: #dfe5e2;
+  --radio: 14px;
+  --sombra: 0 4px 18px rgba(0, 0, 0, .06);
+}
+
+body {
+  background: var(--fondo);
+  color: var(--texto);
+  font-family: system-ui, -apple-system, "Segoe UI", Roboto, Arial, sans-serif;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+main {
+  flex: 1;
+}
+
+a {
+  color: var(--verde);
+}
+
+/* ---------- Botones ---------- */
+.btn-verde {
+  background: var(--verde);
+  border-color: var(--verde);
+  color: #fff;
+}
+.btn-verde:hover, .btn-verde:focus {
+  background: var(--verde-oscuro);
+  border-color: var(--verde-oscuro);
+  color: #fff;
+}
+.btn-outline-verde {
+  border-color: var(--verde);
+  color: var(--verde);
+}
+.btn-outline-verde:hover, .btn-outline-verde:focus {
+  background: var(--verde);
+  color: #fff;
+}
+
+.form-control:focus, .form-select:focus {
+  border-color: var(--verde);
+  box-shadow: 0 0 0 .2rem rgba(29, 107, 72, .2);
+}
+
+/* ---------- Menú ---------- */
+.menu-sitio {
+  background: var(--barra);
+}
+.menu-sitio .navbar-brand {
+  font-weight: 700;
+  letter-spacing: .5px;
+}
+.menu-sitio .nav-link {
+  color: rgba(255, 255, 255, .75);
+}
+.menu-sitio .nav-link:hover,
+.menu-sitio .nav-link.active {
+  color: #fff;
+}
+.menu-sitio .nav-link.active {
+  border-bottom: 2px solid #4fbf8a;
+}
+
+/* ---------- Títulos de sección ---------- */
+.titulo-pagina {
+  font-weight: 700;
+  border-bottom: 1px solid #d5dbd8;
+  padding-bottom: .5rem;
+}
+.titulo-seccion {
+  font-size: 1.25rem;
+  font-weight: 700;
+}
+
+/* ---------- Tarjetas genéricas ---------- */
+.tarjeta {
+  background: #fff;
+  border: 0;
+  border-radius: var(--radio);
+  box-shadow: var(--sombra);
+}
+
+/* ---------- Portada del Inicio ---------- */
+.portada {
+  background: linear-gradient(135deg, var(--verde) 0%, var(--verde-oscuro) 100%);
+  color: #fff;
+  border-radius: var(--radio);
+}
+.portada p {
+  color: rgba(255, 255, 255, .85);
+}
+.portada .btn-light {
+  color: var(--verde-oscuro);
+  font-weight: 600;
+}
+
+.paso-numero {
+  width: 2.2rem;
+  height: 2.2rem;
+  border-radius: 50%;
+  background: var(--verde-claro);
+  color: var(--verde);
+  font-weight: 700;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/* ---------- Tarjeta de automóvil (Inicio, Catálogo, Favoritos) ---------- */
+.tarjeta-auto {
+  background: #fff;
+  border: 1px solid var(--borde);
+  border-radius: var(--radio);
+  overflow: hidden;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  transition: box-shadow .2s, transform .2s;
+}
+.tarjeta-auto:hover {
+  box-shadow: 0 8px 24px rgba(0, 0, 0, .1);
+  transform: translateY(-2px);
+}
+.tarjeta-auto img {
+  width: 100%;
+  aspect-ratio: 16 / 10;
+  object-fit: cover;
+  background: #e9edeb;
+}
+.tarjeta-auto .cuerpo {
+  padding: 1rem;
+  display: flex;
+  flex-direction: column;
+  flex: 1;
+}
+.tarjeta-auto .nombre {
+  font-weight: 700;
+  margin: 0;
+}
+.tarjeta-auto .version {
+  color: var(--texto-suave);
+  font-size: .9rem;
+}
+.tarjeta-auto .precio {
+  font-size: 1.25rem;
+  font-weight: 700;
+  color: var(--verde);
+  margin: .5rem 0 .25rem;
+}
+.tarjeta-auto .datos {
+  color: var(--texto-suave);
+  font-size: .85rem;
+}
+.tarjeta-auto .acciones {
+  margin-top: auto;
+  padding-top: .75rem;
+}
+
+/* ---------- Páginas informativas ---------- */
+.icono-circulo {
+  width: 3rem;
+  height: 3rem;
+  border-radius: 50%;
+  background: var(--verde-claro);
+  color: var(--verde);
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.3rem;
+}
+
+.mapa {
+  width: 100%;
+  min-height: 320px;
+  border: 0;
+  border-radius: var(--radio);
+}
+
+/* ---------- Pie de página ---------- */
+.pie-sitio {
+  background: var(--barra);
+  color: rgba(255, 255, 255, .7);
+  font-size: .9rem;
+}
+.pie-sitio a {
+  color: rgba(255, 255, 255, .85);
+  text-decoration: none;
+}
+.pie-sitio a:hover {
+  color: #fff;
+  text-decoration: underline;
+}
+.pie-sitio h2 {
+  color: #fff;
+  font-size: 1rem;
+  font-weight: 700;
+}
+
+/* ---------- Celular ---------- */
+@media (max-width: 767.98px) {
+  .menu-sitio .nav-link.active {
+    border-bottom: 0;
+    font-weight: 600;
+  }
+  .portada h1 {
+    font-size: 1.6rem;
+  }
+}

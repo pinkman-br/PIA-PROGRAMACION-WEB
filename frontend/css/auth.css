@@ -1,0 +1,58 @@
+/* Estilos de las pantallas Iniciar sesión y Crear cuenta (responsable: Persona 1).
+   Los colores generales los define Persona 2 en estilos.css; aquí solo va lo propio de estas pantallas. */
+
+:root {
+  --verde: #1d6b48;
+  --verde-oscuro: #14513a;
+  --fondo: #f4f6f5;
+}
+
+body.auth {
+  min-height: 100vh;
+  background: var(--fondo);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 24px 16px;
+}
+
+.auth-tarjeta {
+  width: 100%;
+  max-width: 440px;
+  border: 0;
+  border-radius: 16px;
+  box-shadow: 0 6px 24px rgba(0, 0, 0, .08);
+}
+
+.auth-marca {
+  color: var(--verde);
+  font-weight: 700;
+  text-decoration: none;
+  font-size: 1.1rem;
+}
+
+.auth-tarjeta h1 {
+  font-size: 1.6rem;
+  font-weight: 700;
+}
+
+.btn-verde {
+  background: var(--verde);
+  border-color: var(--verde);
+  color: #fff;
+}
+.btn-verde:hover,
+.btn-verde:focus {
+  background: var(--verde-oscuro);
+  border-color: var(--verde-oscuro);
+  color: #fff;
+}
+
+.auth-tarjeta a {
+  color: var(--verde);
+}
+
+.form-control:focus {
+  border-color: var(--verde);
+  box-shadow: 0 0 0 .2rem rgba(29, 107, 72, .2);
+}

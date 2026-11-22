@@ -9,3 +9,6 @@ node_modules/
 Thumbs.db
 .vscode/
 *.log
+
+# Fotos subidas desde el panel de administración (viven con la base de datos de cada quien)
+frontend/img/autos/auto-*

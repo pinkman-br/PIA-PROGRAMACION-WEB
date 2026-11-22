@@ -1,0 +1,30 @@
+/* Estilos de Agendar prueba, Mis citas y Gestión de citas (responsable: Persona 5) */
+
+.estatus-Pendiente    { background: #fff3cd; color: #7a5a00; }
+.estatus-Confirmada   { background: #d1e7dd; color: #0f5132; }
+.estatus-Reprogramada { background: #cfe2ff; color: #084298; }
+.estatus-Cancelada    { background: #e2e3e5; color: #41464b; }
+.badge-estatus {
+  font-weight: 600;
+  padding: .4em .7em;
+  border-radius: 999px;
+  font-size: .8rem;
+}
+
+/* Tarjeta del auto seleccionado en Agendar */
+.auto-elegido img {
+  width: 100%;
+  aspect-ratio: 16 / 10;
+  object-fit: cover;
+  border-radius: 10px;
+  background: #e9edeb;
+}
+.auto-elegido .precio {
+  color: var(--verde, #1d6b48);
+  font-size: 1.3rem;
+  font-weight: 700;
+}
+
+.cita-cancelada td {
+  color: #8a948f;
+}
